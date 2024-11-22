@@ -1,0 +1,14 @@
+
+    <div class="container">
+      <h1>Welcome to the Hospital Management System</h1>
+
+      {% if user.is_authenticated %}
+      <p>Welcome, {{ user.username }}!</p>
+      <!-- Optionally show logout button if user is logged in -->
+      <a href="{% url 'logout' %}" class="btn">Logout</a>
+      {% else %}
+      <a href="{% url 'login' %}" class="btn">Login</a>
+      {% endif %}
+    </div>
+  </body>
+</html>
